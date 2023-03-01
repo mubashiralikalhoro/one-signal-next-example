@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        {/* <script
+        <script
           src="https://cdn.onesignal.com/sdks/OneSignalSDK.js"
           async=""
-        ></script> */}
+        ></script>
       </Head>
       <body>
         <Main />

@@ -1,18 +1,7 @@
 import "@/styles/globals.css";
-import OneSignal from "@/util/OneSignal";
-import { useEffect } from "react";
-import OneSignalReact from "react-onesignal";
+import useOneSignal from "@/util/useOneSignal";
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    OneSignal();
-  }, []);
-
-  useEffect(() => {
-    OneSignalReact.on("subscriptionChange", function (isSubscribed) {
-      console.log("The user's subscription state is now:", isSubscribed);
-    });
-  }, []);
-
+  useOneSignal();
   return <Component {...pageProps} />;
 }
